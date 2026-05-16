@@ -182,29 +182,29 @@ export default function Index() {
       >
         <Shader className="h-full w-full">
           <Swirl
-            colorA="#1275d8"
-            colorB="#e19136"
-            speed={0.8}
-            detail={0.8}
-            blend={50}
-            coarseX={40}
-            coarseY={40}
-            mediumX={40}
-            mediumY={40}
-            fineX={40}
-            fineY={40}
+            colorA="#0d2d6e"
+            colorB="#1a4a8a"
+            speed={0.4}
+            detail={0.6}
+            blend={60}
+            coarseX={50}
+            coarseY={50}
+            mediumX={30}
+            mediumY={30}
+            fineX={20}
+            fineY={20}
           />
           <ChromaFlow
-            baseColor="#0066ff"
-            upColor="#0066ff"
-            downColor="#d1d1d1"
-            leftColor="#e19136"
-            rightColor="#e19136"
-            intensity={0.9}
-            radius={1.8}
-            momentum={25}
+            baseColor="#0a1f4e"
+            upColor="#1a3a7a"
+            downColor="#061530"
+            leftColor="#22c55e"
+            rightColor="#16a34a"
+            intensity={0.7}
+            radius={2.0}
+            momentum={20}
             maskType="alpha"
-            opacity={0.97}
+            opacity={0.95}
           />
         </Shader>
         <div className="absolute inset-0 bg-black/20" />
@@ -220,13 +220,13 @@ export default function Index() {
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">F</span>
+            <span className="font-sans text-xl font-bold text-foreground">G</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Flowrise</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">GasAI Insight</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Главная", "Работы", "Услуги", "О нас", "Контакты"].map((item, index) => (
+          {["Главная", "Преимущества", "Технология", "О платформе", "Контакты"].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
@@ -245,7 +245,7 @@ export default function Index() {
         </div>
 
         <MagneticButton variant="secondary" onClick={() => scrollToSection(4)}>
-          Начать
+          Заказать пилот
         </MagneticButton>
       </nav>
 
@@ -261,16 +261,20 @@ export default function Index() {
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-foreground/90">Современные технологии</p>
+              <p className="font-mono text-xs text-foreground/90">Предиктивная аналитика · Газовая отрасль · ИИ</p>
             </div>
-            <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
+            <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-5xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-6xl lg:text-7xl">
               <span className="text-balance">
-                Цифровое будущее
+                GasAI Insight:
+                <br />
+                <span className="text-foreground/70">Предиктивная аналитика</span>
+                <br />
+                для газовой отрасли
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Создаем современные веб-приложения и цифровые продукты, которые помогают бизнесу расти и развиваться.
+                Снизьте аварийность на 40% и сэкономьте до 150 млн руб. в год. Точность прогнозов 95%. Окупаемость за 8 месяцев.
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
@@ -279,10 +283,10 @@ export default function Index() {
                 variant="primary"
                 onClick={() => scrollToSection(4)}
               >
-                Обсудить проект
+                Заказать пилотный проект
               </MagneticButton>
               <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection(2)}>
-                Наши услуги
+                Как это работает
               </MagneticButton>
             </div>
           </div>
